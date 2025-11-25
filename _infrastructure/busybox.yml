@@ -6,7 +6,7 @@ metadata:
 spec:
   containers:
     - name: busybox
-      image: mcisb/busyboxplus:curl
+      image: ikulyk404/busyboxplus:curl
       imagePullPolicy: Always
       command: ["sh", "-c", "while true; do sleep 30; done"]
 

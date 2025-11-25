@@ -14,3 +14,10 @@ kubectl apply -f _infrastructure/todoapp-pod.yml
 
 # Check that pods are running
 kubectl get pods -n todoapp
+
+# Redirect traffic from one or more local ports to a sub
+kubectl -n todoapp port-forward pod/todoapp 8000:8000
+
+# Test busyboxplus:curl container
+docker build -f Dockerfile.busyboxpluscurl   -t mcisb/busyboxplus:curl .
+docker push mcisb/busyboxplus:curl
